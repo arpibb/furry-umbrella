@@ -1,0 +1,51 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <tab name="init" type="InitTab" active="false" scrollx="719.5" scrolly="415.5" scale="0.9"></tab>
+  <tab name="main" type="MainTab" active="true" scrollx="794.3355123740157" scrolly="465.2118552989816" scale="0.8720866387150458">
+    <variables xmlns="https://developers.google.com/blockly/xml">
+      <variable id="E`h~iZ_5wF@(X$lg^b:[" type="">AN</variable>
+      <variable id="d@z0!45_CH8RobWMZAQ5" type="">AUS</variable>
+    </variables>
+    <block xmlns="https://developers.google.com/blockly/xml" type="bloom" id="cDr?$/CLKYNL/K*S3hAA" x="-770" y="-410">
+      <value name="THRESHOLD">
+        <shadow type="number_slider" id="s(rZ7(`F3DBy#;hrf15U">
+          <field name="NUM" min="0" max="10" step="0.1">0.1</field>
+        </shadow>
+      </value>
+      <value name="STRENGTH">
+        <shadow type="number_slider" id="b]kD=AxtNmohwpqs9pOj">
+          <field name="NUM" min="0" max="10" step="0.1">0.5</field>
+        </shadow>
+      </value>
+      <value name="RADIUS">
+        <shadow type="number_slider" id=";fdRC`UDzH+oA[]WY|6]">
+          <field name="NUM" min="0" max="10" step="0.1">0.4</field>
+        </shadow>
+      </value>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="variables_set" id="yl(S/t|*5a6Sv-1iM;l-" x="-530" y="-290">
+      <field name="VAR" id="E`h~iZ_5wF@(X$lg^b:[">AN</field>
+      <value name="VALUE">
+        <block type="math_number" id="{%-Q@?H~1ZFY)~$#YpO/">
+          <field name="NUM">10000</field>
+        </block>
+      </value>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="variables_set" id="YrXe?!1m]52b89dBldBl" x="-501" y="-234">
+      <field name="VAR" id="d@z0!45_CH8RobWMZAQ5">AUS</field>
+      <value name="VALUE">
+        <block type="math_number" id="%6H28o8QE-.D2}!$`q_C">
+          <field name="NUM">0</field>
+        </block>
+      </value>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="autoRotateCamera" id="|F}OkC9CTCV$1#Y/H/MQ" x="-710" y="-150">
+      <field name="ON_OFF">ON</field>
+      <value name="SPEED">
+        <shadow type="math_number" id="J?*w;)sl[O-EDoq|X4io">
+          <field name="NUM">0.7</field>
+        </shadow>
+      </value>
+    </block>
+  </tab>
+  <editorsettings viewport-x="947.4" viewport-y="28" viewport-w="643.6" viewport-h="453.5" viewport-hidden="false" toolbox-library-mode="false" toolbox-minimized-mode="false"></editorsettings>
+</xml>

@@ -1,0 +1,41 @@
+---
+beatportDigital: false
+cloneLinkDigital: "null"
+junoVinyl: false
+decksVinyl: false
+spotifyLinkDigital: "null"
+name1: "null"
+name2: "null"
+beatportLinkDigital: "null"
+junoLinkVinyl: "null"
+name3: "null"
+name4: "null"
+decksLinkVinyl: "null"
+hardwaxVinyl: false
+junoDigital: false
+decksDigital: false
+order: 10000000
+cloneVinyl: false
+hardwaxLinkVinyl: "null"
+junoLinkDigital: "null"
+decksLinkDigital: "null"
+spotifyVinyl: false
+hardwaxDigital: false
+beatportVinyl: false
+link1: "null"
+cloneLinkVinyl: "null"
+title: "null"
+link2: "null"
+title1: "null"
+embed: "null"
+link3: "null"
+title2: "null"
+spotifyLinkVinyl: "null"
+link4: "null"
+title3: "null"
+cloneDigital: false
+hardwaxLinkDigital: "null"
+title4: "null"
+description: Please don't delete this item.
+spotifyDigital: false
+---

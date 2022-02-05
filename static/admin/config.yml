@@ -1,0 +1,95 @@
+backend:
+  name: github
+  repo: spandau20/spandau20
+  branch: main
+
+media_folder: static/assets/images
+public_folder: assets/images
+
+collections:
+  - name: pages
+    label: Pages
+    files:
+      - name: aboutUs
+        label: About Us
+        file: static/content/about.md
+        fields:
+          - { name: title, label: Title }
+          - { name: email, label: Email }
+          - name: platform
+            label: List of social media links
+            widget: list
+            collapsed: true
+            fields:
+              - { label: Name of the platform, name: platformName, widget: string }
+              - { label: Display name on the platform, name: displayName, widget: string, required: false, hint: 'Leave it empty if there is no specific username like there is for insta'}
+              - { label: Link, name: link, widget: string}
+              - { label: Show social media, name: isShown, widget: boolean, default: false,}
+          - { name: description, label: Description, widget: text }
+          - name: artists
+            label: List of artists
+            widget: list
+            collapsed: true
+            fields:
+              - { label: Artist, name: artist, widget: string }
+              - { label: Link, name: link, widget: string}
+          - { name: photo, label: Photo, widget: image }
+      - name: imprint
+        label: Imprint
+        file: static/content/imprint.md
+        fields:
+          - { name: title, label: Title }
+          - { name: email, label: Email }
+          - { name: instagram, label: Instagram link }
+          - name: paragraphs
+            label: Paragraphs
+            widget: list
+            collapsed: true
+            fields:
+              - { label: Title of paragraph, name: titleOfParagraph, widget: string }
+              - { label: Paragraph, name: paragraph, widget: text }
+         
+  - name: mixtapes
+    label: Mixtapes
+    folder: static/content/mixtapes
+    create: true
+    identifier_name: name
+    fields:
+      - { name: title, label: Title }
+      - { name: byLine, label: By Line }
+      - { name: embed, label: Embed Code }
+      - { name: description, label: Description, required: false}
+
+  - name: releases
+    label: Releases
+    folder: static/content/releases
+    create: true
+    identifier_name: name
+    sortable_fields: [order]
+    fields:
+      - { name: order, label: order, widget: number, hint: Please have a look at the previous release and add a smaller number here if you want this release to appear earlier in the list.}
+      - { name: title, label: Title , widget: string}
+      - { name: description, label: Description , widget: string}
+      - { name: embed, label: Embed Code, widget: string}
+      - name: sideAndTrack
+        label: Tracks on the release
+        widget: list
+        collapsed: true
+        fields:
+          - { name: name, label: Side and Artist of the track, widget: string }
+          - { name: titleOfTrack, label: Title of the track, required: false }
+          - { name: link, label: Link, widget: string}
+      - name: vinylBuyingOptions
+        label: Vinyl buying options
+        widget: list
+        collapsed: true
+        fields:
+          - { name: name, label: Name of platform }
+          - { name: link, label: Link to the platform }
+      - name: digitalBuyingOptions
+        label: Digital buying options
+        widget: list
+        collapsed: true
+        fields:
+          - { name: name, label: Name of platform }
+          - { name: link, label: Link to the platform }

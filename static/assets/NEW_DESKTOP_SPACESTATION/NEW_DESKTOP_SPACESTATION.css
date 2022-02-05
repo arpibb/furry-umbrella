@@ -1,0 +1,44 @@
+/* __V3D_TEMPLATE__ - template-based file; delete this line to prevent this file from being updated */
+
+body {
+    margin: 0px;
+    overflow: hidden;
+}
+
+#v3d-container {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+/* removes tap blinking on ios devices */
+* { -webkit-tap-highlight-color:rgba(0,0,0,0); }
+
+
+.v3d-simple-preloader-background {
+    width: 100%;
+    height: 75%;
+}
+
+.v3d-simple-preloader-logo {
+    width: 100%;
+    height: 125px;
+    margin-bottom: 25px;
+}
+
+@media only screen and (max-width: 480px){
+    .v3d-simple-preloader-background {
+        height: 75%;
+    }
+    
+    .v3d-simple-preloader-logo {
+        padding-left: 20px;
+        padding-bottom: 20px;
+        background-position: center;
+        width: 80%;
+        height: 100px;
+        background-origin: content-box;
+    }
+}
