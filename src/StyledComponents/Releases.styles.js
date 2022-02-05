@@ -68,6 +68,8 @@ export const OuterReleaseWrapper = styled.div`
     display: none;
   }
 
+  animation-name: ${easeInAnimation};
+  animation-duration: 2s;
   -webkit-animation-name: ${easeInAnimation};
   -webkit-animation-duration: 2s;
 

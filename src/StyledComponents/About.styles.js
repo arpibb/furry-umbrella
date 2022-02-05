@@ -17,6 +17,8 @@ export const AboutUsContainer = styled.div`
     display: none;
   }
 
+  animation-name: ${easeInAnimation};
+  animation-duration: 0.5s;
   -webkit-animation-name: ${easeInAnimation};
   -webkit-animation-duration: 0.5s;
 
@@ -24,6 +26,7 @@ export const AboutUsContainer = styled.div`
     width: 100%;
     flex-direction: column;
 
+    animation-duration: 2s;
     -webkit-animation-duration: 2s;
   }
   ${mediaQueries.small} {

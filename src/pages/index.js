@@ -15,6 +15,8 @@ const StyledImprintContainer = styled.div`
   width: 100%;
 
   ${mediaQueries.isSmallScreen} {
+    animation-name: ${easeInAnimation};
+    animation-duration: 1s;
     -webkit-animation-name: ${easeInAnimation};
     -webkit-animation-duration: 1s;
   }

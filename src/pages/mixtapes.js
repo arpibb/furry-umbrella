@@ -29,11 +29,14 @@ const MixtapesContainer = styled.div`
   margin-top: 80px;
   height: 100%;
 
+  animation-name: ${easeInAnimation};
+  animation-duration: 0.5s;
   -webkit-animation-name: ${easeInAnimation};
   -webkit-animation-duration: 0.5s;
 
   ${mediaQueries.small} {
     margin-top: 0;
+    animation-duration: 2s;
     -webkit-animation-duration: 2s;
   }
 `;

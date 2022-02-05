@@ -17,6 +17,8 @@ const StyledSideBar = styled.div`
   transform-origin: top right;
   transform: rotate(90deg) translate(100%, 0);
 
+  animation-name: ${easeInAnimation};
+  animation-duration: 1s;
   -webkit-animation-name: ${easeInAnimation};
   -webkit-animation-duration: 1s;
   top: 40px;
