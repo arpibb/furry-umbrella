@@ -1,7 +1,7 @@
-import React, { useRef } from "react";
-import styled from "styled-components";
-import { screenSizes } from "../styles/variables";
-import { useWindowSize } from "../lib/useWindowSize";
+import React, { useRef } from 'react';
+import styled from 'styled-components';
+import { screenSizes } from '../styles/variables';
+import { useWindowSize } from '../lib/useWindowSize';
 
 const StyledContainer = styled.div`
   position: relative;
@@ -19,29 +19,29 @@ const StyledContainer = styled.div`
 
 const Scene = () => {
   const { width } = useWindowSize();
-  const isPhoneScreen = width <= screenSizes.phone;
+  const isSmallScreen = width <= screenSizes.small;
   const phoneIframeRef = useRef(null);
 
   return (
-    <div className={"scene-container"}>
-      {isPhoneScreen ? (
+    <div className={'scene-container'}>
+      {isSmallScreen ? (
         <iframe
-          id={"phoneIframe"}
+          id={'phoneIframe'}
           ref={phoneIframeRef}
-          title="3d-model"
-          width="100%"
-          src="/assets/spaceStationMobile/210903_Newspacestation_Mobile.html"
-          style={{ visibility: "hidden" }}
+          title='3d-model'
+          width='100%'
+          src='/assets/spaceStationMobile/210903_Newspacestation_Mobile.html'
+          style={{ visibility: 'hidden' }}
           onLoad={() =>
-            (document.getElementById("phoneIframe").style.visibility =
-              "visible")
+            (document.getElementById('phoneIframe').style.visibility =
+              'visible')
           }
         />
       ) : (
         <iframe
-          title="3d-model"
-          width="100%"
-          src="/assets/NEW_DESKTOP_SPACESTATION/NEW_DESKTOP_SPACESTATION.html"
+          title='3d-model'
+          width='100%'
+          src='/assets/NEW_DESKTOP_SPACESTATION/NEW_DESKTOP_SPACESTATION.html'
         />
       )}
     </div>

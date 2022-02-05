@@ -84,7 +84,7 @@ const Mixtapes = ({ data }) => {
   const divRef = useRef(null);
 
   const { width } = useWindowSize();
-  const isSmallScreen = width <= screenSizes.phone;
+  const isSmallScreen = width <= screenSizes.small;
 
   const areControlsVisible = mixtapesData.length > 1;
 

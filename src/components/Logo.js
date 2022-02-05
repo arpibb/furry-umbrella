@@ -1,9 +1,9 @@
-import React from "react";
-import styled from "styled-components";
-import LogoImage from "../images/s20_logo.svg";
-import { useWindowSize } from "../lib/useWindowSize";
-import { mediaQueries, screenSizes } from "../styles/variables";
-import { StaticImage } from "gatsby-plugin-image";
+import React from 'react';
+import styled from 'styled-components';
+import LogoImage from '../images/s20_logo.svg';
+import { useWindowSize } from '../lib/useWindowSize';
+import { mediaQueries, screenSizes } from '../styles/variables';
+import { StaticImage } from 'gatsby-plugin-image';
 
 const StyledContainer = styled.div`
   position: relative;
@@ -27,13 +27,13 @@ const StyledLogo = styled(LogoImage)`
 const Logo = () => {
   const { width } = useWindowSize();
 
-  const isPhoneScreen = width <= screenSizes.phone;
+  const isSmallScreen = width <= screenSizes.small;
   return (
     <StyledContainer>
-      {isPhoneScreen ? (
+      {isSmallScreen ? (
         <StaticImage
-          src="../images/s20_logo.png"
-          alt="Spandau20 record label logo"
+          src='../images/s20_logo.png'
+          alt='Spandau20 record label logo'
         />
       ) : (
         <StyledLogo />

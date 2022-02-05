@@ -21,20 +21,15 @@ export const lineHeights = {
 };
 
 export const screenSizes = {
-  phone: 480,
-  tablet: 768,
+  small: 480,
+  medium: 768,
   desktop: 1024,
-  wide: 1600,
+  wideScreen: 1600,
 };
 
-const small = 480;
-const medium = 768;
-const desktop = 1024;
-const wideScreen = 1600;
-
 export const mediaQueries = {
-  small: `@media only screen and (max-width: ${small}px)`,
-  medium: `@media only screen and (max-width: ${medium}px)`,
-  desktop: `@media only screen and (max-width: ${desktop}px)`,
-  wideScreen: `@media only screen and (min-width: ${wideScreen}px)`,
+  small: `@media only screen and (max-width: ${screenSizes.small}px)`,
+  medium: `@media only screen and (max-width: ${screenSizes.medium}px)`,
+  desktop: `@media only screen and (max-width: ${screenSizes.desktop}px)`,
+  wideScreen: `@media only screen and (min-width: ${screenSizes.wideScreen}px)`,
 };

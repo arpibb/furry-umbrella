@@ -1,11 +1,11 @@
-import React, { useState, useEffect, useContext } from "react";
-import { Link } from "gatsby";
-import styled from "styled-components";
-import spaceStationGif from "../images/animated_spacestation.gif";
-import { mediaQueries, screenSizes } from "../styles/variables";
-import { easeInAnimation } from "../styles/GlobalStyles";
-import { useWindowSize } from "../lib/useWindowSize";
-import { MenuContext } from "../context/menuContext";
+import React, { useState, useEffect, useContext } from 'react';
+import { Link } from 'gatsby';
+import styled from 'styled-components';
+import spaceStationGif from '../images/animated_spacestation.gif';
+import { mediaQueries, screenSizes } from '../styles/variables';
+import { easeInAnimation } from '../styles/GlobalStyles';
+import { useWindowSize } from '../lib/useWindowSize';
+import { MenuContext } from '../context/menuContext';
 
 const StyledSideBar = styled.div`
   display: flex;
@@ -44,7 +44,7 @@ const StyledSideBar = styled.div`
 `;
 
 const StyledParagraph = styled.p`
-  font-family: "neue-haas-grotesk-text";
+  font-family: 'neue-haas-grotesk-text';
   font-size: 10px;
   max-width: 39vh;
   &:nth-child(1) {
@@ -95,7 +95,7 @@ const StyledSpaceStation = styled.div`
 
 const Sidebar = () => {
   const { width, height } = useWindowSize();
-  const isPhoneScreen = width <= screenSizes.phone;
+  const isSmallScreen = width <= screenSizes.small;
   const [hasMounted, setHasMounted] = useState(false);
   const { closeMenu } = useContext(MenuContext);
 
@@ -116,20 +116,20 @@ const Sidebar = () => {
             hereby consent to our disclaimer and agree to its terms.
           </StyledParagraph>
           <StyledParagraph>
-            <Link to="/imprint" onClick={closeMenu}>
+            <Link to='/imprint' onClick={closeMenu}>
               IMPRESSUM
-            </Link>{" "}
+            </Link>{' '}
             ANGABEN GEMÄSS § 5 TMGRöbig & Wagner Label GbR Brückenstraße 1 10179
             Berlin Vertreten durch: Aaron Röbig, Felix Wagner KONTAKT Telefon:
             01573166131 E-Mail: label@spandau20.com
           </StyledParagraph>
-          {!isPhoneScreen && (
-            <Link to={"/"} onClick={closeMenu}>
+          {!isSmallScreen && (
+            <Link to={'/'} onClick={closeMenu}>
               <StyledSpaceStation>
                 <img
                   src={spaceStationGif}
-                  style={{ width: 90.75, height: "auto" }}
-                  alt="Rotating space station GIF"
+                  style={{ width: 90.75, height: 'auto' }}
+                  alt='Rotating space station GIF'
                 />
               </StyledSpaceStation>
             </Link>

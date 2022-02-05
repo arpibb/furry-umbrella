@@ -1,10 +1,10 @@
-import React, { useRef, useContext, useEffect } from "react";
-import { Link } from "gatsby";
-import styled from "styled-components";
-import { useWindowSize } from "../lib/useWindowSize";
-import { mediaQueries, fontSizes, screenSizes } from "../styles/variables";
-import { easeInAnimation } from "../styles/GlobalStyles";
-import { MenuContext } from "../context/menuContext";
+import React, { useRef, useContext, useEffect } from 'react';
+import { Link } from 'gatsby';
+import styled from 'styled-components';
+import { useWindowSize } from '../lib/useWindowSize';
+import { mediaQueries, fontSizes, screenSizes } from '../styles/variables';
+import { easeInAnimation } from '../styles/GlobalStyles';
+import { MenuContext } from '../context/menuContext';
 
 const StyledMenu = styled.div`
   position: absolute;
@@ -33,7 +33,7 @@ const StyledMenu = styled.div`
     color: white;
     text-transform: uppercase;
     text-decoration: none;
-    font-family: "neue-haas-grotesk-display";
+    font-family: 'neue-haas-grotesk-display';
     font-weight: 900;
     letter-spacing: 15px;
     display: inline-block;
@@ -61,7 +61,7 @@ const SmallLinkContainer = styled.div`
 
   & > * {
     color: white;
-    font-family: "neue-haas-grotesk-text";
+    font-family: 'neue-haas-grotesk-text';
     display: block;
     font-size: ${fontSizes.small}px;
     line-height: ${fontSizes.small}px;
@@ -73,75 +73,75 @@ const SmallLinkContainer = styled.div`
 
 const Menu = () => {
   const { width } = useWindowSize();
-  const isSmallScreen = width <= screenSizes.phone;
+  const isSmallScreen = width <= screenSizes.small;
   const menuRef = useRef(null);
   const { closeMenu, isMenuOpen } = useContext(MenuContext);
 
   useEffect(() => {
-    const handleMouseDown = e => {
-      if (isMenuOpen && e.target.className.includes("OverlayContainer")) {
+    const handleMouseDown = (e) => {
+      if (isMenuOpen && e.target.className.includes('OverlayContainer')) {
         closeMenu();
       }
     };
-    document.addEventListener("mousedown", handleMouseDown);
+    document.addEventListener('mousedown', handleMouseDown);
     return () => {
-      document.removeEventListener("mousedown", handleMouseDown);
+      document.removeEventListener('mousedown', handleMouseDown);
     };
   }, [isMenuOpen, closeMenu]);
 
   return (
     <StyledMenu ref={menuRef}>
       <Link
-        to="/about"
+        to='/about'
         onClick={closeMenu}
         onMouseEnter={() =>
-          menuRef.current.classList.add("menu-about-us-hover")
+          menuRef.current.classList.add('menu-about-us-hover')
         }
         onMouseLeave={() =>
-          menuRef.current.classList.remove("menu-about-us-hover")
+          menuRef.current.classList.remove('menu-about-us-hover')
         }
       >
         about us
       </Link>
       <Link
-        to="/mixtapes"
+        to='/mixtapes'
         onClick={closeMenu}
         onMouseEnter={() =>
-          menuRef.current.classList.add("menu-mixtapes-hover")
+          menuRef.current.classList.add('menu-mixtapes-hover')
         }
         onMouseLeave={() =>
-          menuRef.current.classList.remove("menu-mixtapes-hover")
+          menuRef.current.classList.remove('menu-mixtapes-hover')
         }
       >
         mixtapes
       </Link>
       <Link
-        to="/releases"
+        to='/releases'
         onClick={closeMenu}
         onMouseEnter={() =>
-          menuRef.current.classList.add("menu-releases-hover")
+          menuRef.current.classList.add('menu-releases-hover')
         }
         onMouseLeave={() =>
-          menuRef.current.classList.remove("menu-releases-hover")
+          menuRef.current.classList.remove('menu-releases-hover')
         }
       >
         releases
       </Link>
       <a
-        href="https://shop.spandau20.com/merch"
-        onMouseEnter={() => menuRef.current.classList.add("menu-webshop-hover")}
+        href='https://shop.spandau20.com/merch'
+        onMouseEnter={() => menuRef.current.classList.add('menu-webshop-hover')}
         onMouseLeave={() =>
-          menuRef.current.classList.remove("menu-webshop-hover")
+          menuRef.current.classList.remove('menu-webshop-hover')
         }
       >
         webshop
       </a>
       {isSmallScreen && (
         <SmallLinkContainer>
-          <Link to="/" onClick={closeMenu}>
+          <Link to='/' onClick={closeMenu}>
             SPACE STATION
           </Link>
-          <Link to="/imprint" onClick={closeMenu}>
+          <Link to='/imprint' onClick={closeMenu}>
             IMPRINT
           </Link>
         </SmallLinkContainer>

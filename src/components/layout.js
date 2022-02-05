@@ -1,15 +1,15 @@
-import React, { useRef, useEffect, useContext } from "react";
-import PropTypes from "prop-types";
-import styled from "styled-components";
+import React, { useRef, useEffect, useContext } from 'react';
+import PropTypes from 'prop-types';
+import styled from 'styled-components';
 
-import Header from "./header";
-import Menu from "./Menu";
-import Sidebar from "./Sidebar";
-import { useWindowSize } from "../lib/useWindowSize";
-import { mediaQueries, screenSizes } from "../styles/variables";
-import { MenuContext } from "../context/menuContext";
+import Header from './header';
+import Menu from './Menu';
+import Sidebar from './Sidebar';
+import { useWindowSize } from '../lib/useWindowSize';
+import { mediaQueries, screenSizes } from '../styles/variables';
+import { MenuContext } from '../context/menuContext';
 
-import "./layout.css";
+import './layout.css';
 
 const StyledContainer = styled.div`
   display: flex;
@@ -31,7 +31,7 @@ const StyledMain = styled.main`
     overflow: visible;
     height: auto;
 
-    ${props => {
+    ${(props) => {
       if (props.isMenuOpen) {
         return `position: absolute !important;
         top: -9999px !important;
@@ -47,7 +47,7 @@ const OverlayContainer = styled.div`
   &::before {
     background-color: black;
     position: fixed;
-    content: "";
+    content: '';
     top: 0;
     right: 0;
     bottom: 0;
@@ -61,7 +61,7 @@ const OverlayContainer = styled.div`
 
 const Layout = ({ children }) => {
   const { width } = useWindowSize();
-  const isSmallScreen = width <= screenSizes.phone;
+  const isSmallScreen = width <= screenSizes.small;
 
   const { isMenuOpen } = useContext(MenuContext);
 
